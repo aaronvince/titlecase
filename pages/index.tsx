@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { NextSeo } from 'next-seo';
 import styled, { createGlobalStyle } from 'styled-components'
 import useWindowSize from '../hooks/use-window-size'
 
@@ -214,6 +213,22 @@ const Page = styled.main<PageProps>`
   }
 `
 
+const Footer = styled.footer`
+  place-self: end center;
+  margin-block-end: 0.125rem;
+  font-size: small;
+
+  a {
+    color: var(--text);
+    border-bottom: 1px solid var(--secondary-text);
+    text-decoration: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-block-end: 1rem;
+  }
+`
+
 export default function Home() {
   const { width, height } = useWindowSize()
 
@@ -275,7 +290,7 @@ export default function Home() {
         <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#33c1b1' />
         <meta name='msapplication-TileColor' content='#33c1b1' />
         <meta name='theme-color' content='#ffffff' />
-        
+
       </Head>
 
       <h1>Titlecase.me</h1>
@@ -299,7 +314,7 @@ export default function Home() {
           Todo: https://medium.com/a-layman/turn-the-next-js-website-to-pwa-with-workbox-part-1-web-app-manifest-and-caching-offline-support-e6d94330b8f2
           */}
 
-      {/* <footer></footer> */}
+      <Footer>Made with ❤️ by <a href="https://aaronvince.com"> Aaron Vince</a></Footer>
       <Background width={width} height={height} />
     </Page>
   )

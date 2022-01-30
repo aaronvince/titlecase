@@ -51,7 +51,7 @@ const Container = styled.form`
     font-weight: 700;
     color: var(--text);
 
-    margin-top: 16px;
+    margin-block-start: 16px;
     border: 1px solid transparent;
     transition: all 300ms ease-in-out;
 

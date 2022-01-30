@@ -3,6 +3,7 @@ import { AnimatedCircle } from './animated-circle'
 
 const BackgroundSVG = styled.svg`
   opacity: 0.3;
+  height: 100%;
 
   @media (prefers-color-scheme: dark) {
     & > circle {
