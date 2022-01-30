@@ -1,3 +1,6 @@
 module.exports = {
-  webpack5: true,
+  experimental: {
+    // ssr and displayName are configured by default
+    styledComponents: true,
+  },
 }
