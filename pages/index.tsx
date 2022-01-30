@@ -1,6 +1,5 @@
-// import { useState } from 'react'
 import Head from 'next/head'
-// import * as changeCase from 'change-case'
+import { NextSeo } from 'next-seo';
 import styled, { createGlobalStyle } from 'styled-components'
 import useWindowSize from '../hooks/use-window-size'
 
@@ -176,7 +175,7 @@ type PageProps = {
 }
 
 const Page = styled.main<PageProps>`
-  height: ${(props) => props.height};
+  height: ${(props) => props.height ?? '100vh'};
   /* background: radial-gradient(
     circle at 100% 100%,
     hsl(0 100% 50% / 100) 0,
@@ -244,14 +243,14 @@ export default function Home() {
         />
         <meta
           property='og:image'
-          content='https://www.mywebsite.com/image.jpg'
+          content='/og-titlecase-logo.jpg'
         />
-        <meta property='og:image:alt' content='Image description' />
+        <meta property='og:image:alt' content='The black coloured titlecase dot me logotype on a white background.' />
         <meta property='og:locale' content='en_CA' />
         <meta property='og:type' content='website' />
         <meta name='twitter:card' content='summary_large_image' />
-        <meta property='og:url' content='https://titlecase.me/' />
-        <link rel='canonical' href='https://titlecase.me/' />
+        <meta property='og:url' content='https://www.titlecase.me/' />
+        <link rel='canonical' href='https://www.titlecase.me/' />
 
         <link
           rel='apple-touch-icon'
@@ -276,6 +275,7 @@ export default function Home() {
         <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#33c1b1' />
         <meta name='msapplication-TileColor' content='#33c1b1' />
         <meta name='theme-color' content='#ffffff' />
+        
       </Head>
 
       <h1>Titlecase.me</h1>
